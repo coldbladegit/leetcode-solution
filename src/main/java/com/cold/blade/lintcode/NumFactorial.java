@@ -1,6 +1,6 @@
 package com.cold.blade.lintcode;
 
-import cold.blade.utils.LogAlgorithm;
+import com.cold.blade.utils.LogAlgorithm;
 
 /**
  * @author cold_blade
