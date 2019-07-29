@@ -34,16 +34,20 @@ public final class StringToInt {
             begin++;
         }
         long result = 0;
+        long threshold = Integer.MAX_VALUE;
+        // 阈值需要大于Integer.MIN_VALUE的绝对值，这里另外计算是因为long result = Integer.MAX_VALUE + 1
+        // result为负数，原理是 = 右边是两个 int 型数相加，结果仍为 int 类型，然后才强转的 long 类型
+        threshold++;
         for (int index = begin; index < s.length(); index++) {
             char ch = s.charAt(index);
-            // 只处理连续数字
-            if (ch > '9' || ch < '0') {
+            // 只处理连续数字，以及int所能表示的取值范围[-2^31, 2^31 -1]
+            if (ch > '9' || ch < '0' || result >= threshold) {
                 break;
             }
             result = result * 10 + (ch - 48);
         }
         if (isNegative) {
-            result = 0 - result;
+            result = -result;
             return result < Integer.MIN_VALUE ? Integer.MIN_VALUE : (int) result;
         }
         return result > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) result;
@@ -58,8 +62,7 @@ public final class StringToInt {
     private static int check(String s) {
         for (int index = 0; index < s.length(); ++index) {
             char ch = s.charAt(index);
-            if (ch >= '1' && ch <= '9' || ch == '+' || ch == '-') {
-                // 字符串前面的0无效
+            if (ch >= '0' && ch <= '9' || ch == '+' || ch == '-') {
                 return index;
             } else if (ch != ' ') {
                 break;

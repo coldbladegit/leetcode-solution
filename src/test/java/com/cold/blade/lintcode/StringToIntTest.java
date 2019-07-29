@@ -19,5 +19,7 @@ public class StringToIntTest extends BaseTest {
         Assert.assertEquals(4193, StringToInt.valueOf("4193 with words"));
         Assert.assertEquals(0, StringToInt.valueOf("words and 987"));
         Assert.assertEquals(4193, StringToInt.valueOf("4193 with 1234"));
+        Assert.assertEquals(-2147483648, StringToInt.valueOf("-91283472332"));
+        Assert.assertEquals(0, StringToInt.valueOf("0-1"));
     }
 }
