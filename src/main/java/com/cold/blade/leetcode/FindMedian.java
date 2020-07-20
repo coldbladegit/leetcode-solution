@@ -1,4 +1,4 @@
-package com.cold.blade.lintcode;
+package com.cold.blade.leetcode;
 
 /**
  * 我们假设两个有序数组都是升序。

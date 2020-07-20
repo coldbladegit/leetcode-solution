@@ -1,4 +1,4 @@
-package com.cold.blade.lintcode;
+package com.cold.blade.leetcode;
 
 import com.cold.blade.utils.LogAlgorithm;
 

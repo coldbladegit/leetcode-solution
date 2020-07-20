@@ -1,4 +1,4 @@
-package com.cold.blade.lintcode;
+package com.cold.blade.leetcode;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,10 +1,10 @@
-package com.cold.blade.lintcode;
+package com.cold.blade.leetcode;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import com.cold.blade.BaseTest;
-import com.cold.blade.lintcode.Problem2.ListNode;
+import com.cold.blade.leetcode.Problem2.ListNode;
 
 /**
  * @author cold_blade

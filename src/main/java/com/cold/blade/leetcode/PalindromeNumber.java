@@ -1,4 +1,4 @@
-package com.cold.blade.lintcode;
+package com.cold.blade.leetcode;
 
 /**
  * 判断是否为回文数
