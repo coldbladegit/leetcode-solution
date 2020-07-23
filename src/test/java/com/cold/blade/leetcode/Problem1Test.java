@@ -6,7 +6,7 @@ import org.junit.Test;
 import com.cold.blade.BaseTest;
 
 /**
- * @Description 试题一的单元测试
+ * @Description 试题1 --- 从整数数组中选取和为target的两个数的单元测试
  *
  * @author cold_blade
  * @date 2020/7/15
